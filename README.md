@@ -1,5 +1,6 @@
 # powersl
 How to build the shared library:
+```
 1. install ccmake:
 	sudo apt-get install cmake-curses-gui
 2. install g++ if it does not exist:
@@ -32,9 +33,10 @@ This will also run some test examples to verify the correct installation.
 8. Check if the libraries are working:
 	make PETSC_DIR=<the full cloned petsc dir path> PETSC_ARCH=linux-gnu-c-debug check
 If this step runs successfully PETSc is ready for use.
-
+```
 
 Building the shared library:
+```
 1. Clone the shared library project from git into a location available for the user executing the GO competition scripts:
 	git clone https://github.com/ntirpankar/powersl.git
 2. Create a build directory in the clone and navigate to the build directoty:
@@ -48,4 +50,4 @@ Building the shared library:
 6. Make sure that the newly generated libraries are available on the LD_LIBRARY_PATH for the application to use
 	export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:$PWD
 Note that this shared library path will be required by the user running the GO competition scripts.
-
+```
